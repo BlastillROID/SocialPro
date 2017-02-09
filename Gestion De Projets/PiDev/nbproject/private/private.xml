@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/GUI_ADD_Project.fxml</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Services/SubProject_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/InterfaceService/IEmployee_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Entities/SubProject.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/InterfaceService/ISubProject_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Services/Generenic_Class_Crud.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/Graphics/jfxtras-styles-master/src/jmetro8/JMetroLightTheme.css</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Services/Projects_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/InterfaceService/ITeam_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Entities/Employee.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/InterfaceService/IProjects_Sevices.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/GUI_ADD_ProjectController.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/nbproject/jfx-impl.xml</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Entities/Directeur.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/PiDev.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/DataBase/DataSource.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Services/Teams_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Entities/Projects.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Services/Employee_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/InterfaceService/CRUD_Services.java</file>
+            <file>file:/C:/Users/LordGoats/Documents/NetBeansProjects/PiDev/src/pidev/Entities/Teams.java</file>
+        </group>
+    </open-files>
+</project-private>
