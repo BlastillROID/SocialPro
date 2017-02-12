@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="374.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLRRH_complaint_rependreConrtoller">
+   <children>
+      <JFXTextField fx:id="titre" editable="false" layoutX="68.0" layoutY="58.0" style="-fx-background-color: white;" />
+      <JFXTextArea fx:id="descreptif" editable="false" layoutX="68.0" layoutY="129.0" prefHeight="162.0" prefWidth="348.0" scrollTop="10.0" style="-fx-background-color: white;" />
+      <Button fx:id="Benvoyer" layoutX="438.0" layoutY="328.0" mnemonicParsing="false" onAction="#envoyer_complaint_reponse" text="Envoyer" />
+   </children>
+</AnchorPane>

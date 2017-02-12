@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="374.0" prefWidth="515.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLRRH_complaint_repondreConrtoller">
+   <children>
+      <JFXTextField fx:id="titre" editable="false" labelFloat="true" layoutX="68.0" layoutY="58.0" promptText="Titre" style="-fx-background-color: white;" unFocusColor="#ff0101" />
+      <JFXTextArea fx:id="descreptif" editable="false" labelFloat="true" layoutX="68.0" layoutY="106.0" prefHeight="69.0" prefWidth="348.0" promptText="descriptif" style="-fx-background-color: white;" unFocusColor="RED" />
+      <Button fx:id="Benvoyer" layoutX="438.0" layoutY="328.0" mnemonicParsing="false" onAction="#envoyer_complaint_reponse" text="Envoyer" />
+      <JFXTextArea fx:id="TAreponse" focusColor="#12dcee" labelFloat="true" layoutX="68.0" layoutY="207.0" prefHeight="95.0" prefWidth="348.0" promptText="Repondre" unFocusColor="#2eae28" />
+      <Button fx:id="Bannuler" cancelButton="true" layoutX="68.0" layoutY="328.0" mnemonicParsing="false" onAction="#annuler" text="Annuler" />
+      <Label fx:id="Lid" layoutX="320.0" layoutY="75.0" text="Label" visible="false" />
+   </children>
+</AnchorPane>
