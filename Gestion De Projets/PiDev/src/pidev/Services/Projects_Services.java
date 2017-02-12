@@ -42,14 +42,14 @@ public class Projects_Services extends Generenic_Class_Crud implements IProjects
     @Override
     public void Ajout(Projects O) {
         try {
-            String req = "insert into Projects values (?,?,?,?)";
+            String req = "INSERT INTO `projects`(`project_name`, `project_desc`, `manager_id`)  values (?,?,?)";
 
             this.setPs(connection.prepareStatement(req));
 
-            this.getPs().setInt(1, O.getProject_ID());
-            this.getPs().setString(2, O.getProject_Name());
-            this.getPs().setString(3, O.getProject_Desc());
-            this.getPs().setInt(4, O.getManager_ID());
+        
+            this.getPs().setString(1, O.getProject_Name());
+            this.getPs().setString(2, O.getProject_Desc());
+            this.getPs().setInt(3, O.getManager_ID());
 
             //this.getPs().setInt(2, product.getCreator().getId());
             this.getPs().executeUpdate();
@@ -57,6 +57,40 @@ public class Projects_Services extends Generenic_Class_Crud implements IProjects
             Logger.getLogger(Projects_Services.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+    }
+    
+    /**
+     *
+     * @param ID
+     * @return
+     */
+    @Override
+    public Projects getByID(int ID) {
+       
+            
+        try {
+            String req = "Select * from projects WHERE  project_id="+ID;
+            System.out.println("I'm now right here bitch ");
+          
+          //  this.getPs().setInt(1, ID);
+                System.out.println("This is the ID"+ID);
+           
+        
+    
+            this.setPs(connection.prepareStatement(req));
+            Projects_Services.setRs(this.getPs().executeQuery());
+
+            while (Projects_Services.getRs().next()) {
+                Projects P = new Projects(Projects_Services.getRs().getInt(1), Projects_Services.getRs().getString(2), Projects_Services.getRs().getString(3), Projects_Services.getRs().getInt(4));
+                return P;
+          }
+            
+            //this.getPs().setInt(2, product.getCreator().getId());
+         
+        } catch (SQLException ex) {
+            Logger.getLogger(Employee_Services.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             return null;
     }
 
     @Override
@@ -79,13 +113,13 @@ public class Projects_Services extends Generenic_Class_Crud implements IProjects
     }
 
     @Override
-    public void Suppression(Projects O) {
+    public void Suppression(int ID) {
         try {
-            String req = "DELETE FROM projects WHERE project_ID=?";
+            String req = "DELETE FROM projects WHERE project_ID="+ID;
 
             this.setPs(connection.prepareStatement(req));
 
-            this.getPs().setInt(1, O.getProject_ID());
+          //  this.getPs().setInt(1, O.getProject_ID());
 
             //this.getPs().setInt(2, product.getCreator().getId());
             this.getPs().executeUpdate();
@@ -175,10 +209,10 @@ public class Projects_Services extends Generenic_Class_Crud implements IProjects
            Projects_Services.setRs(connection.createStatement().executeQuery(sqlp));
             // Titres de colonnes
             String[] titres = {                             
-                    "id",
-                    "titre",
-                    "description",
-                    "id employee",
+                    "ID",
+                    "Name",
+                    "Description",
+                    "Manager",
                     
  
             };

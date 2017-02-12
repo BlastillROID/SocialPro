@@ -16,7 +16,7 @@ public class Projects {
     private int Manager_ID;
 
     public Projects() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     public int getProject_ID() {
@@ -51,8 +51,14 @@ public class Projects {
         this.Manager_ID = Manager_ID;
     }
 
-    public Projects(int Project_ID, String Project_Name, String Project_Desc, int Manager_ID) {
+    public Projects(int Project_ID ,String Project_Name, String Project_Desc, int Manager_ID) {
         this.Project_ID = Project_ID;
+        this.Project_Name = Project_Name;
+        this.Project_Desc = Project_Desc;
+        this.Manager_ID = Manager_ID;
+    } 
+    public Projects(String Project_Name, String Project_Desc, int Manager_ID) {
+        
         this.Project_Name = Project_Name;
         this.Project_Desc = Project_Desc;
         this.Manager_ID = Manager_ID;

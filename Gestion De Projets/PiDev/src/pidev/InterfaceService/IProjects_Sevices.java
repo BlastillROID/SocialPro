@@ -15,7 +15,9 @@ import pidev.Entities.Projects;
 public interface IProjects_Sevices {
     public void Ajout(Projects O);
     public void Modif(Projects O);
-    public void Suppression(Projects O);
+    public void Suppression(int ID);
     public List<Projects> Affichage();
+     public Projects getByID(int ID);
+     
     
 }
