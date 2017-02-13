@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TabPane layoutX="1.0" layoutY="1.0" prefHeight="465.0" prefWidth="761.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="700.0">
+                     <children>
+                          <Button fx:id="button" layoutX="589.0" layoutY="280.0" onAction="#handleButtonAction" text="Click Me!" />
+                        <TableView fx:id="tableV_complaint" editable="true" layoutX="7.0" prefHeight="200.0" prefWidth="601.0" tableMenuButtonVisible="true" />
+                        <TextField fx:id="textField" layoutX="52.0" layoutY="255.0" onKeyReleased="#chercher" />
+                        <JFXTextField fx:id="tf_chercher_complaint" focusColor="#28726e" layoutX="52.0" layoutY="293.0" onKeyReleased="#chercher_complaint">
+                           <unFocusColor>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#99c2d7" />
+                                    <Stop color="#12dcee" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </unFocusColor>
+                        </JFXTextField>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField id="Titre" fx:id="Titre" layoutX="87.0" layoutY="54.0" promptText="Titre" />
+                        <TextArea id="Descriptif" fx:id="Descriptif" layoutX="87.0" layoutY="150.0" prefHeight="95.0" prefWidth="434.0" promptText="tapez.." />
+                        <Label layoutX="21.0" layoutY="58.0" text="Titre:" />
+                        <Label layoutX="19.0" layoutY="150.0" text="Descriptif:" />
+                        <Button fx:id="Benvoyer_rec" layoutX="667.0" layoutY="377.0" mnemonicParsing="false" onAction="#Envoyer_reclamation" text="Envoyer" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Untitled Tab 3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableV_complaint_modif" onMousePressed="#getComplaint" prefHeight="437.0" prefWidth="381.0">
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem fx:id="Bsupprimer_complaint" mnemonicParsing="false" onAction="#supprimer_complaint" text="supprimer" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu></TableView>
+                        <Label layoutX="418.0" layoutY="43.0" prefHeight="17.0" prefWidth="102.0" text="ID" />
+                        <Label layoutX="418.0" layoutY="93.0" text="Titre" />
+                        <Label layoutX="418.0" layoutY="158.0" text="Descreptif" />
+                        <TextField fx:id="titreComlaint_modif" layoutX="496.0" layoutY="89.0" />
+                        <TextArea fx:id="descreptifComplaint_modif" layoutX="496.0" layoutY="158.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="idComplaint_modif" layoutX="496.0" layoutY="43.0" text="Label" />
+                        <Button fx:id="enregisterB_complaint_modif" layoutX="678.0" layoutY="390.0" mnemonicParsing="false" onAction="#Modifier_reclamation" text="Enregister" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
