@@ -1,0 +1,8 @@
+.TableView {
+    border-collapse: collapse;
+}
+
+table-view .column-header, .table-view .filler {
+    background-color: #4CAF50;
+    color: white;
+}
