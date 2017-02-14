@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="418.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidevwithmaven.FXMLController">
+   <children>
+      <TabPane fx:id="tab" layoutX="22.0" layoutY="14.0" prefHeight="358.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="affichage_event_tab" fx:id="affichage_tab" text="Affichage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="591.0">
+                     <children>
+                        <TableView fx:id="TableV" layoutX="12.0" layoutY="17.0" onSort="#test" prefHeight="295.0" prefWidth="589.0">
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem fx:id="modifier_evenement_menu" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+                                    <MenuItem fx:id="supprimer_evenement_menu" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu></TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="ajouter_event_tab" fx:id="ajouter_tab" text="Ajouter">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="566.0">
+                     <children>
+                        <Label layoutX="31.0" layoutY="31.0" text="Nom de l'évènement " />
+                        <Label layoutX="31.0" layoutY="63.0" text="Type Evènement " />
+                        <Label layoutX="31.0" layoutY="93.0" text="Adresse " />
+                        <TextField id="event_name_tf" fx:id="nom_evenement_tf" layoutX="165.0" layoutY="27.0" />
+                        <TextField fx:id="addresse_evenement_tf" layoutX="165.0" layoutY="89.0" />
+                        <DatePicker fx:id="date_evenement" layoutX="165.0" layoutY="121.0" />
+                        <Label layoutX="31.0" layoutY="125.0" text="Date de l'évènement" />
+                        <Button fx:id="button2" layoutX="544.0" layoutY="290.0" mnemonicParsing="false" onAction="#test2" text="Ajouter" />
+                        <ComboBox fx:id="type_evenement_cb" layoutX="165.0" layoutY="59.0" prefWidth="150.0" />
+                        <Label layoutX="27.0" layoutY="196.0" text="Description" />
+                        <Label layoutX="31.0" layoutY="156.0" text="Media" />
+                        <TextField fx:id="media_evenement_tf" layoutX="166.0" layoutY="152.0" />
+                        <TextArea fx:id="description_evenement_tf" layoutX="165.0" layoutY="190.0" prefHeight="101.0" prefWidth="304.0" />
+                        <Button fx:id="uploadImg" layoutX="331.0" layoutY="152.0" mnemonicParsing="false" onAction="#test" text="Upload" />
+                        <ImageView fx:id="imgPreview" fitHeight="150.0" fitWidth="200.0" layoutX="392.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                        <JFXButton fx:id="modifier_evenement" layoutX="475.0" layoutY="290.0" onAction="#modifier_Action" style="-fx-background-color: #42a2a4;" text="Modifier" />
+                        <Label fx:id="id_lb" layoutX="44.0" layoutY="273.0" opacity="0.0" text="Label" />
+                        <JFXTextField fx:id="nom_evenement_tf2" layoutX="339.0" layoutY="27.0" />
+                        <JFXTextField fx:id="addresse_evenement_tf2" layoutX="339.0" layoutY="90.0" />
+                        <JFXComboBox fx:id="type_evenement_cb" layoutX="339.0" layoutY="59.0" prefHeight="25.0" prefWidth="135.0" />
+                        <JFXDatePicker layoutX="339.0" layoutY="120.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
