@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codeigniters.pidev.FXML_SubProjectController">
+    <stylesheets>
+        <URL value="@/styles/fxml_subproject.css" />
+    </stylesheets>
+   <children>
+      <SplitPane dividerPositions="0.9212962962962963" prefHeight="400.0" prefWidth="650.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="SubProject_TV" layoutY="-2.0" prefHeight="400.0" prefWidth="604.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="381.0" prefWidth="354.0">
+               <children>
+                  <GridPane layoutX="3.0" layoutY="1.0" prefHeight="71.0" prefWidth="47.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="AddSubProject" mnemonicParsing="false" onAction="#AddSub" prefHeight="31.0" prefWidth="64.0" text="Button" />
+                        <Button fx:id="Delete_SubProject" mnemonicParsing="false" onAction="#DeleteSub" prefHeight="31.0" prefWidth="69.0" text="Button" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

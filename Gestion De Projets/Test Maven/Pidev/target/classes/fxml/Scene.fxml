@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="442.0" prefWidth="1203.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codeigniters.pidev.FXMLController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="44.0" layoutY="35.0" text="Manager" />
+      <Label layoutX="44.0" layoutY="85.0" text="Project Name" />
+      <Label layoutX="44.0" layoutY="143.0" text="Description" />
+      <ListView fx:id="LV_Projects" layoutX="635.0" layoutY="25.0" prefHeight="400.0" prefWidth="549.0" />
+      <TableView fx:id="Table_ViewP" layoutX="595.0" onMouseClicked="#Click_TableView" prefHeight="450.0" prefWidth="610.0">
+         <contextMenu>
+            <ContextMenu fx:id="ContextMenu_TableView">
+              <items>
+                  <MenuItem fx:id="Tableview_toSubProjects" mnemonicParsing="false" onAction="#GotoSubprojects" text="SubProjects" />
+                  <MenuItem fx:id="Tableview_Delete" mnemonicParsing="false" onAction="#Delete_TableviewSelection" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TableView>
+      <ButtonBar layoutX="298.0" layoutY="393.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+            <JFXButton fx:id="Project_Cancel" onAction="#Cancel_Project" text="Cancel" />
+            <JFXButton fx:id="Project_update" onAction="#Update_Project" text="Update" />
+            <JFXButton fx:id="Submit_Project" onAction="#handleButtonAction" text="Add" />
+        </buttons>
+      </ButtonBar>
+      <JFXComboBox fx:id="ManagerLists" layoutX="248.0" layoutY="30.0" prefHeight="31.0" prefWidth="310.0" />
+      <JFXTextField fx:id="FT_ProjectName" layoutX="248.0" layoutY="81.0" prefHeight="29.0" prefWidth="310.0" />
+      <JFXTextArea fx:id="FT_Project_Description" layoutX="161.0" layoutY="153.0" prefHeight="229.0" prefWidth="407.0" />
+      <ToggleButton fx:id="Passthru" layoutX="393.0" layoutY="164.0" mnemonicParsing="false" onAction="#GotoSub" text="ToggleButton" />
+    </children>
+</AnchorPane>
