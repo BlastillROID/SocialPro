@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="935.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLRRH_complaintController">
+   <children>
+      <JFXTabPane layoutY="-2.0" prefHeight="520.0" prefWidth="935.0">
+         <tabs>
+            <Tab text="Reclamations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableV_complaint" editable="true" layoutY="69.0" onMousePressed="#getComplaint" prefHeight="298.0" prefWidth="617.0" stylesheets="@../../Style/test.css" tableMenuButtonVisible="true" />
+                        <JFXTextField fx:id="tf_chercher_complaint" focusColor="#00b3ca" labelFloat="true" layoutX="25.0" layoutY="22.0" onKeyReleased="#chercher_complaint" promptText="chercher" />
+                        <JFXTextArea fx:id="TA_description_info" editable="false" labelFloat="true" layoutX="622.0" layoutY="243.0" prefHeight="119.0" prefWidth="295.0" promptText="descriptif">
+                           <unFocusColor>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#4d4d4d" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </unFocusColor></JFXTextArea>
+                        <JFXTextField fx:id="TF_titre_info" editable="false" labelFloat="true" layoutX="622.0" layoutY="193.0" promptText="titre">
+                           <unFocusColor>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#4d4d4d" offset="0.011494252873563218" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </unFocusColor></JFXTextField>
+                        <JFXTextField fx:id="TF_nom_info" editable="false" labelFloat="true" layoutX="622.0" layoutY="69.0" promptText="Nom &amp; Prenom">
+                           <unFocusColor>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#4d4d4d" offset="0.011494252873563218" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </unFocusColor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="TF_mail_info" editable="false" labelFloat="true" layoutX="622.0" layoutY="110.0" promptText="\@Mail">
+                           <unFocusColor>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#4d4d4d" offset="0.011494252873563218" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </unFocusColor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="TF_tel_info" editable="false" labelFloat="true" layoutX="622.0" layoutY="149.0" promptText="Tél">
+                           <unFocusColor>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#4d4d4d" offset="0.011494252873563218" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </unFocusColor>
+                        </JFXTextField>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Autre..">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
