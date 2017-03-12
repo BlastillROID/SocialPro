@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1121.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.EmpmainpageController">
+   <children>
+      <VBox prefHeight="728.0" prefWidth="216.0">
+         <children>
+            <Label prefHeight="114.0" prefWidth="220.0" style="-fx-background-color: #4186db;" />
+            <JFXButton buttonType="RAISED" prefHeight="92.0" prefWidth="222.0" ripplerFill="#943737" style="-fx-background-color: #ff5e42;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="HelveticaNeue-Thin" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="profileViewBtn" buttonType="RAISED" onAction="#showProfile" prefHeight="92.0" prefWidth="222.0" ripplerFill="#275b94" style="-fx-background-color: #4477b5;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="HelveticaNeue-Thin" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="92.0" prefWidth="221.0" ripplerFill="#4d9058" style="-fx-background-color: #5be575;" text="Team" textFill="WHITE">
+               <font>
+                  <Font name="HelveticaNeue-Thin" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="92.0" prefWidth="242.0" style="-fx-background-color: #C0C0C0;" text="Messaging" textFill="WHITE">
+               <font>
+                  <Font name="HelveticaNeue-Thin" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logoutBtn" onAction="#logoutClicked" prefHeight="92.0" prefWidth="249.0" style="-fx-background-color: #9842f4;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="HelveticaNeue-Thin" size="34.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ScrollPane layoutX="216.0" prefHeight="728.0" prefWidth="905.0">
+         <content>
+            <AnchorPane fx:id="showPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="707.0" prefWidth="904.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
