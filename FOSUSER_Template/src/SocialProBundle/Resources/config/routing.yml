@@ -1,0 +1,7 @@
+social_pro_homepage:
+    path:     /
+    defaults: { _controller: SocialProBundle:Default:index }
+
+admin_home:
+    path:     /admin
+    defaults: { _controller: SocialProBundle:Home:adminPage }

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="text-center">
+            <h1>Social Pro V1.0</h1>
+            <p>
+                Currently Working : FOS Login, Register, Profile, and admin
+            </p>
+            <img src={{ asset("images/tmp-logo.png") }} alt="">
+           <a href="/login"> <button class="btn btn-primary btn-lg">Login</button></a>
+            <a href="/register"><button class="btn btn-success btn-lg">Register</button></a>
+            <a href="/profile"><button class="btn btn-danger btn-lg">Check your profile</button></a>
+        </div>
+    </div>
+{% endblock %}
