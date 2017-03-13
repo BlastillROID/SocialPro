@@ -1,16 +1,13 @@
-Symfony Standard Edition
+SocialPro V1.0
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
-
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Welcome to Social Pro, a fully-functional Symfony
+application that you can use as the skeleton for SocialPro Project
 
 What's inside?
 --------------
 
-The Symfony Standard Edition is configured with the following defaults:
+The project is configured with the following defaults:
 
   * An AppBundle you can use to start coding;
 
@@ -20,7 +17,9 @@ The Symfony Standard Edition is configured with the following defaults:
 
   * Swiftmailer;
 
-  * Annotations enabled for everything.
+  * FOSUSER;
+  
+  * Integrated Template;
 
 It comes pre-configured with the following bundles:
 
@@ -58,7 +57,6 @@ released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  https://symfony.com/doc/3.1/setup.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
 [7]:  https://symfony.com/doc/3.1/doctrine.html
 [8]:  https://symfony.com/doc/3.1/templating.html
