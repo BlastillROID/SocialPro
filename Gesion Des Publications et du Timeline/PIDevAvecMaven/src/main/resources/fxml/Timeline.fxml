@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="showPane" maxHeight="+Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidevavecmaven.TimelineController">
+   <children>
+      <ScrollPane fx:id="profileTab" maxHeight="1.7976931348623157E308" prefHeight="1000.0" prefWidth="800.0">
+         <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="5000.0" prefWidth="800.0">
+               <children>
+                  <ImageView fitHeight="220.0" fitWidth="800.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/bump.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="logOut" fitHeight="50.0" fitWidth="50.0" layoutX="740.0" layoutY="3.0" onMouseClicked="#logoutClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/logout.png" />
+                     </image></ImageView>
+                  <Label fx:id="profileNameLabel" layoutX="14.0" layoutY="225.0" prefHeight="34.0" prefWidth="209.0" text="Full Name" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="jobTitleLabel" layoutX="198.0" layoutY="223.0" prefHeight="38.0" prefWidth="135.0" text="Job title">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutY="264.0" prefHeight="160.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0;" />
+                  <JFXButton fx:id="postItBtn" layoutX="673.0" layoutY="430.0" onAction="#postItButtonClicked" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #2b8bda;" text="Publier" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <VBox fx:id="vbAfficher" layoutX="50.0" layoutY="520.0" maxHeight="1.7976931348623157E308" prefHeight="2000.0" prefWidth="700.0" style="-fx-border-color: #000000;">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding></VBox>
+                  <VBox alignment="CENTER" layoutY="264.0" prefHeight="150.0" prefWidth="800.0" style="-fx-border-color: #000000;">
+                     <children>
+                        <HBox prefHeight="150.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fx:id="profilePic" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/boy-512.png" />
+                                 </image></ImageView>
+                              <VBox alignment="TOP_RIGHT" prefHeight="150.0" prefWidth="631.0">
+                                 <children>
+                                    <JFXTextArea fx:id="taPost" prefHeight="150.0" prefWidth="513.0" promptText="Exprimez-vous ...">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXTextArea>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="513.0">
+                                       <children>
+                                          <Hyperlink fx:id="hFile" lineSpacing="2.0" style="-fx-font-style: underlined;" textFill="#2320e8" underline="true" />
+                                          <ImageView fx:id="imgPostBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#uploadImage" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/imgicon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </VBox>
+                  <Label layoutX="200.0" layoutY="10.0" text="Bienvenue cher employé">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
