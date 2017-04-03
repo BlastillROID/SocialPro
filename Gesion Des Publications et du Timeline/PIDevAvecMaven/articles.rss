@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+	<title>Eclipse and Java Information</title>
+	<link>http://edition.cnn.com</link>
+	<description>Eclipse and Java Information</description>
+	<language>en</language>
+	<copyright>Copyright hold by Lars Vogel</copyright>
+	<pubdate>Tue, 21 Feb 2017 06:28:36 +0100</pubdate>
+<item>
+	<title>RSSFeed</title>
+	<description>Top Stories of the world</description>
+	<link>http://rss.cnn.com/rss/edition.rss</link>
+	<author>unknown@somewhere.com (Who Cares)</author>
+	<guid>http://rss.cnn.com/rss/edition.rss</guid>
+
+</item>
+
+</channel>
+</rss>
