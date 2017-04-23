@@ -1,0 +1,271 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {% if is_granted('ROLE_USER') %}
+        <script>
+            window.location.href = "http://localhost/SociallyPro/web/app_dev.php/newsfeed";
+        </script>
+    {% else %}
+        <!--preloader-->
+        <div id="spinner-wrapper">
+            <div class="spinner"></div>
+        </div>
+
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="This is social network html5 template available in themeforest......" />
+            <meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+            <meta name="robots" content="index, follow" />
+            <title>Friend Finder | A Complete Social Network Template</title>
+
+            <!-- Stylesheets
+            ================================================= -->
+            <link rel="stylesheet" href={{ asset('css/bootstrap.min.css') }} />
+            <link rel="stylesheet" href={{ asset('css/style.css') }} />
+            <link rel="stylesheet" href={{ asset('css/ionicons.min.css') }} />
+            <link rel="stylesheet" href={{ asset('css/font-awesome.min.css')}} />
+            <!--Google Webfont-->
+            <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700' rel='stylesheet' type='text/css'>
+            <!--Favicon-->
+            <link rel="shortcut icon" type="image/png" href={{ asset('images/fav.png') }}/>
+        </head>
+
+        <!-- Top Banner
+        ================================================= -->
+
+
+        <!-- Features Section
+        ================================================= -->
+        <section id="features">
+            <div class="container wrapper">
+                <h1 class="section-title slideDown"><img alt="" src={{ asset("tmp-logo.png") }} ></h1>
+                <div class="row slideUp">
+                    <div class="feature-item col-md-2 col-sm-6 col-xs-6 col-md-offset-2">
+                        <div class="feature-icon"><i class="icon ion-person-add"></i></div>
+                        <h3>Make Friends</h3>
+                    </div>
+                    <div class="feature-item col-md-2 col-sm-6 col-xs-6">
+                        <div class="feature-icon"><i class="icon ion-images"></i></div>
+                        <h3>Publish Posts</h3>
+                    </div>
+                    <div class="feature-item col-md-2 col-sm-6 col-xs-6">
+                        <div class="feature-icon"><i class="icon ion-chatbox-working"></i></div>
+                        <h3>Private Chats</h3>
+                    </div>
+                    <div class="feature-item col-md-2 col-sm-6 col-xs-6">
+                        <div class="feature-icon"><i class="icon ion-compose"></i></div>
+                        <h3>Create Polls</h3>
+                    </div>
+                </div>
+                <h2 class="sub-title">find awesome people like you</h2>
+                <div id="incremental-counter" data-value="101242"></div>
+                <p>People Already Signed Up</p>
+                <img alt="" class="img-responsive face-map slideUp hidden-sm hidden-xs" src={{ asset('images/face-map.png') }} />
+            </div>
+
+        </section>
+
+        <!-- Download Section
+        ================================================= -->
+        <section id="app-download">
+            <div class="container wrapper">
+                <h1 class="section-title slideDown">Download</h1>
+                <ul class="app-btn list-inline slideUp">
+                    <li><button class="btn-secondary"><img  alt="App Store" src={{ asset('images/app-store.png') }} /></button></li>
+                    <li><button class="btn-secondary"><img  alt="Google Play" src={{ asset('images/google-play.png') }} /></button></li>
+                </ul>
+                <h2 class="sub-title">Stay connected Anytime and Anywhere</h2>
+                <img  alt="iPhone" class="img-responsive" src={{ asset('images/rse.jpg') }} />
+            </div>
+        </section>
+
+        <!-- Image Divider
+        ================================================= -->
+        <div class="img-divider hidden-sm hidden-xs"></div>
+
+        <!-- Facts Section
+        ================================================= -->
+        <section id="site-facts">
+            <div class="container wrapper">
+                <div class="circle">
+                    <ul class="facts-list">
+                        <li>
+                            <div class="fact-icon"><i class="icon ion-ios-people-outline"></i></div>
+                            <h3 class="text-white">1,01,242</h3>
+                            <p>People registered</p>
+                        </li>
+                        <li>
+                            <div class="fact-icon"><i class="icon ion-images"></i></div>
+                            <h3 class="text-white">21,01,242</h3>
+                            <p>Posts published</p>
+                        </li>
+                        <li>
+                            <div class="fact-icon"><i class="icon ion-checkmark-round"></i></div>
+                            <h3 class="text-white">41,242</h3>
+                            <p>People online</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Feed Section
+        ================================================= -->
+        <section id="live-feed">
+            <div class="container wrapper">
+                <h1 class="section-title slideDown">Live Feed</h1>
+                <ul class="online-users list-inline slideUp">
+                    <li><a title="Alexis Clark" href={{ asset('admin/images/faces/1a.png') }}><img src="http://placehold.it/300x300" alt="" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+                    <li><a title="James Carter" href={{ asset('admin/images/faces/1b.png') }}><img src="http://placehold.it/300x300" alt="" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+                    <li><a title="Robert Cook" href={{ asset('admin/images/faces/2a.png') }}><img src="http://placehold.it/300x300" alt="" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+                    <li><a title="Richard Bell" href={{ asset('admin/images/faces/2b.png') }}><img src="http://placehold.it/300x300" alt="" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+                    <li><a title="Anna Young" href={{ asset('admin/images/faces/3a.png') }}><img src="http://placehold.it/300x300" alt="" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+                    <li><a title="Julia Cox" href={{ asset('admin/images/faces/3b.png') }}><img src="http://placehold.it/300x300" alt="" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+                </ul>
+                <h2 class="sub-title">See what’s happening now</h2>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-md-offset-2">
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Sarah</a> just posted a photo from Moscow</p>
+                                <p class="text-muted">20 Secs ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">John</a> Published a post from Sydney</p>
+                                <p class="text-muted">1 min ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Julia</a> Updated her status from London</p>
+                                <p class="text-muted">5 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Sophia</a> Share a photo from Virginia</p>
+                                <p class="text-muted">10 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Linda</a> just posted a photo from Toronto</p>
+                                <p class="text-muted">20 mins ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Nora</a> Shared an article from Ohio</p>
+                                <p class="text-muted">22 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Addison</a> Created a poll from Barcelona</p>
+                                <p class="text-muted">23 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Diana</a> Posted a video from Captown</p>
+                                <p class="text-muted">27 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Sarah</a> Shared friend's post from Moscow</p>
+                                <p class="text-muted">30 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="feed-item">
+                            <img src="http://placehold.it/300x300" alt="user" class="img-responsive profile-photo-sm" />
+                            <div class="live-activity">
+                                <p><a href="#" class="profile-link">Emma</a> Started a new job at Torronto</p>
+                                <p class="text-muted">33 mins ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer
+        ================================================= -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-wrapper">
+                        <div class="col-md-3 col-sm-3">
+                            <a href=""><img alt="" class="footer-logo" src={{ asset('images/logo-black.png') }} /></a>
+                            <ul class="list-inline social-icons">
+                                <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon ion-social-googleplus"></i></a></li>
+                                <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
+                                <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <h6>For individuals</h6>
+                            <ul class="footer-links">
+                                <li><a href={{ path('fos_user_registration_register') }}>Signup</a></li>
+                                <li><a href={{ path('fos_user_security_login') }}>Login</a></li>
+                                <li><a href="">Explore</a></li>
+                                <li><a href="">Finder app</a></li>
+                                <li><a href="">Features</a></li>
+                                <li><a href="">Language settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <h6>For businesses</h6>
+                            <ul class="footer-links">
+                                <li><a href="">Business signup</a></li>
+                                <li><a href="">Business login</a></li>
+                                <li><a href="">Benefits</a></li>
+                                <li><a href="">Resources</a></li>
+                                <li><a href="">Advertise</a></li>
+                                <li><a href="">Setup</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <h6>About</h6>
+                            <ul class="footer-links">
+                                <li><a href="">About us</a></li>
+                                <li><a href="">Contact us</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms</a></li>
+                                <li><a href="">Help</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <h6>Contact Us</h6>
+                            <ul class="contact">
+                                <li><i class="icon ion-ios-telephone-outline"></i>+1 (234) 222 0754</li>
+                                <li><i class="icon ion-ios-email-outline"></i>info@thunder-team.com</li>
+                                <li><i class="icon ion-ios-location-outline"></i>228 Park Ave S NY, USA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>copyright @thunder-team 2016. All rights reserved</p>
+            </div>
+        </footer>
+    {% endif %}
+{% endblock %}

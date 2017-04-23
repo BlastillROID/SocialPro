@@ -1,0 +1,43 @@
+social_pro_homepage:
+    path:     /
+    defaults: { _controller: SocialProBundle:Default:index }
+
+admin_home:
+    path:     /admin
+    defaults: { _controller: SocialProBundle:Default:admin }
+
+admin_show_userlist:
+    path:     /admin/userlist
+    defaults: { _controller: SocialProBundle:Admin:showUsers }
+
+admin_show_postlist:
+    path:     /admin/postlist
+    defaults: { _controller: SocialProBundle:Admin:showPosts }
+
+admin_filter_postlist:
+    path:     /admin/postlistfiltre
+    defaults: { _controller: SocialProBundle:Admin:filtrer }
+
+recherche_post_DQL:
+    path:     /admin/postlist/recherche
+    defaults: { _controller: SocialProBundle:Admin:rechercheUsernameDQL }
+
+admin_show_postlist_delete:
+    path:     /delete/{id}
+    defaults: { _controller: SocialProBundle:Admin:delete }
+
+profile_post:
+    path:     /profilee
+    defaults: { _controller: SocialProBundle:Posts:perso }
+
+update_post:
+    path:     /profilee/{id}
+    defaults: { _controller: SocialProBundle:Posts:modifier }
+
+social_pro_newsfeed:
+    path:     /newsfeed
+    defaults: { _controller: SocialProBundle:Posts:newsfeed }
+
+signaler_post:
+    path:     /newsfeed/{id}
+    defaults: { _controller: SocialProBundle:Posts:signaler }
